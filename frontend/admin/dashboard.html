@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Karmic Canteen</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="container" style="padding-top: 2rem; padding-bottom: 2rem;">
+        <div class="dashboard-header">
+            <div>
+                <h1 class="dashboard-title">Admin Dashboard</h1>
+                <p style="color: var(--text-secondary); margin-top: 0.5rem;" id="menuDateDisplay"></p>
+            </div>
+            <button class="btn-logout" onclick="logout()">Logout</button>
+        </div>
+
+        <div class="stats-grid" id="statsContainer"></div>
+
+        <div style="margin-top: 2rem;">
+            <a href="menu.html" class="btn btn-primary" style="display: inline-block;">
+                <span class="btn-icon">➕</span>
+                Manage Menu
+            </a>
+        </div>
+    </div>
+    <script src="../js/api.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/admin-dashboard.js"></script>
+</body>
+</html>
