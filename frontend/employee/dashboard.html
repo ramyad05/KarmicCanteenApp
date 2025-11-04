@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard - Karmic Canteen</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="container" style="padding-top: 2rem; padding-bottom: 2rem;">
+        <div class="dashboard-header">
+            <div>
+                <h1 class="dashboard-title">Meal Selection</h1>
+                <p style="color: var(--text-secondary); margin-top: 0.5rem;" id="menuDateDisplay"></p>
+                <p style="color: var(--text-secondary); margin-top: 0.25rem; font-size: 0.875rem;" id="currentTime"></p>
+            </div>
+            <button class="btn-logout" onclick="logout()">Logout</button>
+        </div>
+
+        <div class="success-message" id="successMessage">
+            ✓ Your meal selection has been confirmed!
+        </div>
+
+        <div id="lockedMessage" style="background-color: #fee2e2; color: #991b1b; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem; display: none;">
+            <strong>Selection Closed:</strong> Meal selection closes at 9:00 PM daily. Please try again tomorrow.
+        </div>
+
+        <form id="mealSelectionForm" class="meal-selection">
+            <h2 class="meal-selection-title">Select Your Meals</h2>
+            <div class="meal-choices" id="mealChoices"></div>
+            <button type="submit" class="submit-btn" id="submitBtn">Confirm Selection</button>
+        </form>
+    </div>
+    <script src="../js/api.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/employee-dashboard.js"></script>
+</body>
+</html>
